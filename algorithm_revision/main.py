@@ -1,9 +1,12 @@
+import sys
 from sorting_algo import sorting
 
 
-def main():
-	algo_1 = sorting(debug_level = 1)
-	algo_1.main(-1)
+def main(args):
+    for arg_idx in (args):
+        algo_1 = sorting()
+        algo_1.main(int(arg_idx))
 
 if __name__ == "__main__":
-	main()
+    argv_list = sys.argv[1:]
+    main(argv_list)
